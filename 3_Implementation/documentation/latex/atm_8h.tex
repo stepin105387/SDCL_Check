@@ -1,0 +1,160 @@
+\hypertarget{atm_8h}{}\doxysection{atm.\+h File Reference}
+\label{atm_8h}\index{atm.h@{atm.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{atm_8h_a1dfb6a5b220b5f156a1944ea95147e6a}{name}} (char N\+A\+ME\mbox{[}10\mbox{]})
+\item 
+int \mbox{\hyperlink{atm_8h_a13f8d4d513f225bd2efd6b219cf67464}{pin}} (char P\+IN\mbox{[}10\mbox{]})
+\item 
+int \mbox{\hyperlink{atm_8h_a545a4adf1d3225729e5f3aaa3149af8a}{otp}} (char O\+TP\mbox{[}10\mbox{]})
+\item 
+int \mbox{\hyperlink{atm_8h_a518e4dc0f471e54033bb7127aa370506}{selectoption}} (int option)
+\item 
+int \mbox{\hyperlink{atm_8h_a6b064549a8ddaa5f9de9565af76d9784}{accounttype}} (char T\+Y\+PE\mbox{[}10\mbox{]})
+\item 
+int \mbox{\hyperlink{atm_8h_a1b706bc89ec1f3459fd2ef440776b5cf}{withdraw}} (unsigned long withdraw)
+\item 
+int \mbox{\hyperlink{atm_8h_ac81c738c05745b759e46c356e42aa12e}{deposit}} (unsigned long deposit)
+\item 
+int \mbox{\hyperlink{atm_8h_a91b6f3d3ff66d858be2d69d172232865}{anothertransaction}} (char transaction)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{atm_8h_a6b064549a8ddaa5f9de9565af76d9784}\label{atm_8h_a6b064549a8ddaa5f9de9565af76d9784}} 
+\index{atm.h@{atm.h}!accounttype@{accounttype}}
+\index{accounttype@{accounttype}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{accounttype()}{accounttype()}}
+{\footnotesize\ttfamily int accounttype (\begin{DoxyParamCaption}\item[{char}]{T\+Y\+PE\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+Compare the entered account type with account types stored in array of string for corresponding user name 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em T\+Y\+PE} & account type \char`\"{}savings\char`\"{} or \char`\"{}current\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered account type is found in array of strings for the corresponding user name else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered account type is incorrect then user is asked to enter the account type again and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a91b6f3d3ff66d858be2d69d172232865}\label{atm_8h_a91b6f3d3ff66d858be2d69d172232865}} 
+\index{atm.h@{atm.h}!anothertransaction@{anothertransaction}}
+\index{anothertransaction@{anothertransaction}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{anothertransaction()}{anothertransaction()}}
+{\footnotesize\ttfamily int anothertransaction (\begin{DoxyParamCaption}\item[{char}]{transaction }\end{DoxyParamCaption})}
+
+Check whether the user wants another transaction or not 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em transaction} & accepts the char \textquotesingle{}y\textquotesingle{} or \textquotesingle{}Y\textquotesingle{} for another transaction and \textquotesingle{}n\textquotesingle{} or \textquotesingle{}N\textquotesingle{} to cancel the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if user enter \textquotesingle{}y\textquotesingle{} or \textquotesingle{}Y\textquotesingle{} user is asked to select the option for another transaction and if user enter \textquotesingle{}n\textquotesingle{} or \textquotesingle{}N\textquotesingle{} then cancel the transaction else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the user enter any other character then display the message \char`\"{}\+Only Enter \textquotesingle{}y\textquotesingle{} or \textquotesingle{}\+Y\textquotesingle{} For Another Transaction And \textquotesingle{}n\textquotesingle{} or \textquotesingle{}\+N\textquotesingle{} To Cancel The Last Transaction\char`\"{} and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_ac81c738c05745b759e46c356e42aa12e}\label{atm_8h_ac81c738c05745b759e46c356e42aa12e}} 
+\index{atm.h@{atm.h}!deposit@{deposit}}
+\index{deposit@{deposit}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily int deposit (\begin{DoxyParamCaption}\item[{unsigned long}]{deposit }\end{DoxyParamCaption})}
+
+Check the deposit amount is multiples of 100 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em deposit} & amount to be deposited \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered amount is multiples of 100 else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered amount is not multiples of 100 then display the message \char`\"{}\+Please Enter The Amount In Multiples Of 100\char`\"{} and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a1dfb6a5b220b5f156a1944ea95147e6a}\label{atm_8h_a1dfb6a5b220b5f156a1944ea95147e6a}} 
+\index{atm.h@{atm.h}!name@{name}}
+\index{name@{name}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily int name (\begin{DoxyParamCaption}\item[{char}]{N\+A\+ME\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+Compare the entered name with names stored in array of string 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N\+A\+ME} & user name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered name is found in array of strings else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered name is incorrect then user is asked to enter the name again and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a545a4adf1d3225729e5f3aaa3149af8a}\label{atm_8h_a545a4adf1d3225729e5f3aaa3149af8a}} 
+\index{atm.h@{atm.h}!otp@{otp}}
+\index{otp@{otp}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{otp()}{otp()}}
+{\footnotesize\ttfamily int otp (\begin{DoxyParamCaption}\item[{char}]{O\+TP\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+Compare the entered O\+TP with O\+T\+Ps stored in array of string for corresponding user name 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em O\+TP} & One Time Password sent to user registered mobile number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered O\+TP is found in array of strings for the corresponding user name else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered O\+TP is incorrect then user is asked to enter the O\+TP again and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a13f8d4d513f225bd2efd6b219cf67464}\label{atm_8h_a13f8d4d513f225bd2efd6b219cf67464}} 
+\index{atm.h@{atm.h}!pin@{pin}}
+\index{pin@{pin}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{pin()}{pin()}}
+{\footnotesize\ttfamily int pin (\begin{DoxyParamCaption}\item[{char}]{P\+IN\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+Compare the entered P\+IN with P\+I\+Ns stored in array of string for corresponding user name 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em P\+IN} & security pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered P\+IN is found in array of strings for the corresponding user name else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered P\+IN is incorrect then user is asked to enter the P\+IN again and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a518e4dc0f471e54033bb7127aa370506}\label{atm_8h_a518e4dc0f471e54033bb7127aa370506}} 
+\index{atm.h@{atm.h}!selectoption@{selectoption}}
+\index{selectoption@{selectoption}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{selectoption()}{selectoption()}}
+{\footnotesize\ttfamily int selectoption (\begin{DoxyParamCaption}\item[{int}]{option }\end{DoxyParamCaption})}
+
+User is asked to select the option 1 for Balance Enquiry, 2 for Cash Withdraw, 3 for Cash Deposit and 4 for Quit 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em option} & user select the option to do transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if the selected option is 1 or 2 or 3 or 4 else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If user select option other than 1 or 2 or 3 or 4, the user is asked to select the option again and return 0 
+\end{DoxyNote}
+\mbox{\Hypertarget{atm_8h_a1b706bc89ec1f3459fd2ef440776b5cf}\label{atm_8h_a1b706bc89ec1f3459fd2ef440776b5cf}} 
+\index{atm.h@{atm.h}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!atm.h@{atm.h}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily int withdraw (\begin{DoxyParamCaption}\item[{unsigned long}]{withdraw }\end{DoxyParamCaption})}
+
+Check the withdrawal amount is multiples of 100 and is greater than initial balance -\/ 1000 as the minimum balance need to be maintained is 1000 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em withdraw} & withdrawal amount \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True(1) if entered amount is multiples of 100 and is greater than initial balance -\/ 1000 else return False(0) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the entered amount is not multiples of 100 then display the message \char`\"{}\+Please Enter The Amount In Multiples Of 100\char`\"{} and return 0 and if the withdrawal amount is lesser than initial balance -\/ 1000 then display the message \char`\"{}\+Insufficient Balance\char`\"{} and return 0 
+\end{DoxyNote}

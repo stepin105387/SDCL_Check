@@ -1,0 +1,14 @@
+Software requirement: CodeBlocks IDE.
+
+Operating System requirements: Windows 7 and higher versions.
+
+Functional and other requirements: 
+  The user details such as name, PIN, OTP and account type are stored as array of strings. The various functions required in the project are:
+  
+    •	Balance( ): The Balance( ) function is used to display the current balance in the user account.
+    
+    •	Withdraw( ): The Withdraw( ) function is used to withdraw amount form the account. The Withdraw( ) function ask user to enter the amount 	to withdraw. Here the user need to enter the amount in the multiple of 100. If the user enter the amount which is not multiple of 100 	then the function displays the message “Please Enter The Amount In Multiples Of 100”. The minimum amount need to be maintained in the 	account is 1000. If the user enters the amount which is greater than initial amount – 1000, then the function displays Insufficient 	Balance. If the above two criteria are met then amount is withdraw successfully.
+                   
+    •	Deposit( ): The Deposit( ) function asks the amount to be deposited. Again the user need to entre deposit amount in multiples of 100 and 	entered amount by the user is get added to current balance.
+                  
+    •	Quit( ): The Quit( ) function is used to end the transaction.
