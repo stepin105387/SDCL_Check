@@ -15,7 +15,9 @@ test/test_atm.c
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
-INC	= -Iinc
+INC	= -Iinc\
+-Itest\
+-Iunity
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
