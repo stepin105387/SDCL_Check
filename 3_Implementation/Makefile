@@ -7,7 +7,8 @@ BUILD = build
 # All source code files
 SRC = main.c\
 src/atm.c\
-test/test_atm.c
+test/test_atm.c\
+unity/unity.c
 
 # All test source files
 TEST_SRC = src/atm.c\
